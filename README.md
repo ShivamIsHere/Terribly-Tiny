@@ -1,19 +1,44 @@
-React Histogram App
-This React application fetches the contents of a text file from a URL, counts the frequency of occurrence of each word in the text, and then displays a histogram of the 20 most occurring words using the Recharts library.
+# Histogram Generator
 
-Installation and Usage
-To use this application, follow these steps:
+This is a React application that generates a histogram from a text file. The top 20 most frequently occurring words in the text file are displayed in the histogram. The application also provides the option to export the histogram data as a CSV file.
 
-Clone this repository to your local machine.
-Install the required dependencies using the command npm install.
-Start the development server using the command npm start.
-Open your web browser and navigate to http://localhost:3000.
-Click the "Submit" button to fetch the data from the URL and generate the histogram.
-Click the "Export" button to download a CSV file of the histogram data.
-Dependencies
-This application uses the following dependencies:
+## Dependencies
 
-React: A JavaScript library for building user interfaces.
-whatwg-fetch: A window.fetch polyfill for making HTTP requests.
-lodash: A JavaScript utility library for working with arrays, objects, and strings.
-Recharts: A composable charting library built on top of React components.
+The following dependencies are used in this application:
+
+- React
+- whatwg-fetch
+- lodash
+- recharts
+
+## How to Run the Application
+
+1. Clone the repository.
+2. Open the command prompt and navigate to the project directory.
+3. Run `npm install` to install the dependencies.
+4. Run `npm start` to start the application.
+5. Open the web browser and go to `http://localhost:3000/` to view the application.
+
+## How to Use the Application
+
+1. Click the "Submit" button to fetch the text data from the provided URL.
+2. The top 20 most frequently occurring words will be displayed in the histogram.
+3. Click the "Export" button to download the histogram data as a CSV file.
+
+## Components
+
+### App
+
+The main component of the application that fetches the text data and generates the histogram. It uses the `useState` hook to manage the state of the histogram data.
+
+### fetchData
+
+A function that fetches the text data from the provided URL using `whatwg-fetch` and processes it using `lodash`.
+
+### exportData
+
+A function that exports the histogram data as a CSV file.
+
+### BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend
+
+Components from `recharts` library used to display the histogram.
